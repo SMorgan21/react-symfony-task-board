@@ -1,0 +1,9 @@
+{
+    "require": {
+        "doctrine/orm": "^3.6",
+        "doctrine/doctrine-bundle": "^3.2",
+        "symfony/serializer": "^8.0",
+        "phpdot/console": "^2.2",
+        "nelmio/cors-bundle": "^2.6"
+    }
+}
