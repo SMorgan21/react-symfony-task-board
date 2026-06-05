@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Attribute\Ignore;
 use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
@@ -33,6 +34,7 @@ class Project
      * @var Collection<int, Column>
      */
     #[ORM\OneToMany(targetEntity: Column::class, mappedBy: 'project')]
+    #[Ignore]
     private Collection $columns;
 
     public function __construct()
